@@ -1,0 +1,45 @@
+.vitals-box{
+overflow-y: hidden;
+}
+.btn-box{
+    display: flex;
+    justify-content: space-evenly;
+    
+    
+}
+.dbtn{
+    width:200px;
+    padding:10px 20px;
+    font-weight: bold;
+}
+
+p{
+    
+    font-family: 'montserrat';
+    font-weight: bold;
+    color: #444343;
+}
+
+.add-btn{
+    background-color:#6DF5D4;
+   
+}
+.cancel-btn{
+    background-color: #444343;
+    border:1px solid #6DF5D4;
+    
+}
+span{
+    color:#FFFF;
+}
+.dtitle{
+    color:#444343;
+    font-size:25px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.det-box{
+    display: flex;
+    justify-content: space-evenly;
+}

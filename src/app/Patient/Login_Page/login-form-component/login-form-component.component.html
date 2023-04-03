@@ -1,0 +1,26 @@
+<h1>Welcome Back</h1>
+<mat-card>
+    <mat-card-content>
+        <form #f='ngForm' (submit)="onSubmit(f.value)">
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input type="email" name="Email" matInput ngModel #Email='ngModel' (change)="getValue(Email)" required
+                    pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+\.[a-z]{2,6}$" id="email">
+                <mat-error *ngIf="Email.touched && (Email.invalid||Email.errors?.pattern)">Invalid email
+                    format</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input [type]="showPassword ? 'password' : 'text'" name="password" matInput ngModel #password='ngModel'
+                    (change)="getValue(password)" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" id="pass">
+                <mat-error *ngIf="password.touched && (password.invalid||password.errors?.pattern)">Invalid
+                    password format</mat-error>
+                <mat-icon matSuffix (click)="togglePasswordVisibility()">
+                    {{showPassword?'visibility_off':'visibility'}}
+                </mat-icon>
+            </mat-form-field>
+            <br>
+            <button mat-button type="submit" class="login-button"><span class="l_span">Login</span></button>
+        </form>
+    </mat-card-content>
+</mat-card>

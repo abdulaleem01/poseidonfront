@@ -1,0 +1,42 @@
+.frdate{
+    padding-top:5%;
+    padding-left: 5%;
+
+}
+
+.demo-toggles {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .demo-toggles * {
+    margin-bottom: 16px;
+  }
+  
+  .demo-options {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+  }
+  
+  .demo-data * {
+    margin: 16px 0;
+  }
+  
+  .demo-paginator {
+    width: 600px;
+  }
+  
+  .frdtbt{
+    display: flex;
+    gap: 15px;
+  }
+
+  .isactive {
+    padding: 10px 15px 10px 15px;
+    background-color: #6DF5D4 !important;
+    border-radius: 50px;
+}
+.b{
+    margin-top: 10px;
+}

@@ -1,0 +1,44 @@
+button {
+    background-color: #6DF5D4 !important;
+    font-family: 'montserrat';
+
+}
+
+h3{
+    font-family: 'montserrat';
+    font-weight: 700;
+    color:#444343;
+}
+
+h3 span{
+    color:#444343;
+    font-weight: 500;
+}
+
+.container {
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 30px;
+}
+
+#medHist{
+    border-radius: 20px !important;
+    margin-right: 40px;
+}
+
+.btnSection{
+    margin-top: 40px;
+    margin-left: 200px
+}
+
+.btns{
+    border-radius: 20px !important;
+}
+#newObs{
+    background-color: #444343 !important;
+    color: white;
+}
+
+.detail-container{
+    margin-top: 50px;
+}

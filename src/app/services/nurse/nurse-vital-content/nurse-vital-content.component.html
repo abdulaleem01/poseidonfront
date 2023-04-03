@@ -1,0 +1,72 @@
+<form #f="ngForm" (submit)="sendData(bp.value,rr.value,temp.value,ht.value,wt.value,nt.value,bps.value,bg.value)">
+  <h1 mat-dialog-title class="dtitle">Add Vitals</h1>
+  <div fxLayoutAlign="center">
+    <p>Appointment with Dr. {{doctorName}}</p>
+  </div>
+  <div mat-dialog-content class="vitals-box">
+    <div class="det-box">
+      <mat-form-field appearance="fill">
+        <mat-label>Blood Pressure Systolic</mat-label>
+        <input matInput ngModel name="syst" #bps="ngModel">
+      </mat-form-field>
+      
+      <mat-form-field appearance="fill">
+        <mat-label>Blood Pressure Diastolic</mat-label>
+        <input matInput ngModel name="diast" #bp="ngModel">
+      </mat-form-field>
+
+ 
+    </div>
+    <div class="det-box">
+      <mat-form-field appearance="fill">
+        <mat-label>Blood Group</mat-label>
+        <input matInput ngModel name="blood-group" #bg="ngModel">
+      </mat-form-field>
+      
+
+      <!-- &nbsp;  -->
+      <mat-form-field appearance="fill">
+        <mat-label>Temperature</mat-label>
+        <input matInput ngModel name="temperature" #temp="ngModel">
+      </mat-form-field>
+    </div>
+    <div class="det-box">
+      <mat-form-field appearance="fill">
+        <mat-label>Height</mat-label>
+        <input matInput ngModel name="height" #ht="ngModel">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Weight</mat-label>
+        <input matInput ngModel name="weight" #wt="ngModel">
+      </mat-form-field>
+    </div>
+    <div class="det-box">
+      <mat-form-field appearance="fill">
+        <mat-label>Respiratory rate</mat-label>
+        <input matInput ngModel name="rr" #rr="ngModel">
+      </mat-form-field>
+
+
+      <mat-form-field  appearance="fill">
+        <mat-label>Allergies</mat-label>
+        <mat-select multiple [(ngModel)]="selectedValues" name="allergieees">
+          <mat-option *ngFor="let a of allergyList" [value]="a">{{a}}</mat-option>
+        </mat-select>
+        
+      </mat-form-field>      
+    </div>
+    <div class="det-box">
+      <mat-form-field appearance="fill" style="width: 97.5%;">
+        <mat-label>Notes</mat-label>
+        <input matInput ngModel name="notes" #nt="ngModel">
+      </mat-form-field>
+    </div>
+
+  </div>
+  <div mat-dialog-actions class="btn-box">
+    <button mat-button class="add-btn dbtn" type="submit"><span>ADD</span></button>
+    <button mat-button class="cancel-btn dbtn" onclick="close()"><span>CANCEL</span></button>
+
+  </div>
+</form>

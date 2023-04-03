@@ -1,0 +1,38 @@
+.container{
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+button{
+    border-radius: 20px;
+    font-family: 'montserrat';
+}
+
+#editBtn{
+    background-color: #6DF5D4 !important;
+}
+
+#deleteBtn{
+    background-color: #444343;
+    color: white;
+}
+
+h4{
+    font-family: 'montserrat';
+    font-weight:600 ;
+}
+
+.headers{
+    font-family: 'montserrat';
+    font-weight: 600;
+}
+
+.data{
+    font-family: 'montserrat';
+}
+
+#page{
+    margin-top: 10px;
+    font-family: 'montserrat';
+}

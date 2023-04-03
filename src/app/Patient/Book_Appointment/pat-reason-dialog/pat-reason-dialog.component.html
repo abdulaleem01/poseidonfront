@@ -1,0 +1,17 @@
+<h1>Add reason</h1>
+<div mat-dialog-content class="dialog-box">
+    <form #f='ngForm' (submit)="onSubmit(f.value)">
+        <mat-form-field appearance="outline">
+            <mat-label>Reason</mat-label>
+            <input type="tel" name="reason" matInput ngModel #reason='ngModel' (change)="getValue(reason)" required >
+            <mat-error *ngIf="reason.touched && (reason.invalid)">Invalid email format</mat-error>
+       
+        </mat-form-field>
+        <br>
+       
+        <button mat-button class="update-buttons" *ngIf="reason.valid" type="submit" (click)="onNoClick()"><span>Confirm</span></button>
+        <button mat-button disabled class="update-buttons" *ngIf="reason.invalid"><span>Confirm</span></button>
+        <button mat-button class="back-buttons" type="button" (click)="onNoClick()"><span>Cancel</span></button>
+
+    </form>
+</div>

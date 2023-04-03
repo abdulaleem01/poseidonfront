@@ -1,0 +1,27 @@
+<mat-toolbar class="nav-bar">
+    <span>Poseidon Healthcare</span>
+    <div class="space"></div>
+    <a class="button isactive">Home</a>
+    <a class="button"><app-login-logout></app-login-logout> </a>
+</mat-toolbar>
+
+<h3>Hello Admin!</h3>
+
+<div class="link_cards">
+
+    <a class="service-card" (click)="to_schedule()"><img src="../../../../assets/Admin_shedule.img.png" alt="Schedule"
+            width="60px" height="60px"></a>
+    <a class="service-card" (click)="to_avail_doc()"><img src="../../../../assets/available_doctors.png" alt="Schedule"
+            width="60px" height="60px"></a>
+    <a class="service-card" (click)="to_admin_home()"><img src="../../../../assets/Admin_patientinf.png"
+            alt="Patient Info" width="60px" height="60px"></a>
+    <a class="service-card" (click)="to_add_doc()"><img src="../../../../assets/add_doctor.png" alt="Patient Info"
+            width="65px" height="65px"></a>
+
+</div>
+<div class="card_names">
+    <span class="n">Schedule</span>
+    <span class="avad">Available doctors</span>
+    <span class="a">Patient Info</span>
+    <span class="ad">Add Doctor</span>
+</div>

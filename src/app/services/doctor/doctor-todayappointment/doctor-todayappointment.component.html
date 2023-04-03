@@ -1,0 +1,33 @@
+<app-doctor-nav></app-doctor-nav>
+
+
+<!-- <div class="frdate">
+    <h2>Select Date:</h2>
+
+    <div class="frdtbt">
+    <mat-form-field appearance="fill">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <button class=" dv button isactive  b" mat-button mat-dialog-close>Confirm</button>
+    </div>
+</div> -->
+
+<div class="frdate">
+<h2>{{date | date:'fullDate'}}</h2>
+</div>
+
+
+<!-- <div *ngFor="let data of doc.responseData">
+    <h3>{{data.name}}</h3>
+    <h3>{{data.age}}</h3>
+</div>  -->
+
+
+
+<app-pagination-td></app-pagination-td>
+ 

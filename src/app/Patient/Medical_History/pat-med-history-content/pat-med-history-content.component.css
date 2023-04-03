@@ -1,0 +1,96 @@
+button{
+    background-color: #6DF5D4 !important;
+}
+
+.container {
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 30px;
+}
+
+h3{
+    font-family: 'montserrat';
+    font-weight: 700;
+    color: #444343;
+}
+
+h3 span{
+    font-weight: 500;
+    color: #444343;
+}
+
+.detail-container{
+    margin-top: 50px;
+}
+
+h2{
+    font-family: 'montserrat';
+    font-weight: 700;
+    margin-top: 50px;
+
+}
+img{
+    margin-top: 5px;
+}
+
+mat-card {
+    width: 450px;
+    height: 250px;
+    border-radius: 5%;
+    border: solid 1px #444343;
+    box-shadow: none;
+    margin-bottom: 40px;
+}
+
+.card-area {
+    margin-top: 50px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+mat-card-actions {
+    margin-top: 30px;
+    align-items: center;
+}
+
+.actions button {
+
+    background-color: #6DF5D4 !important;
+    border-radius: 20px;
+    width: 120px;
+    color:#444343;
+    font-family: 'montserrat';
+    font-weight: 600;
+    margin-right: 5px;
+    margin-left: 5px;
+   
+}
+
+#card-icon {
+    text-align: center;
+}
+
+mat-card-header h3 {
+    font-family: 'montserrat';
+    font-weight: 500;
+}
+
+mat-card-content {
+    margin-top: 0 !important;
+    font-family: 'montserrat';
+    font-weight: 500;
+}
+
+#spl {
+    font-size: small;
+}
+
+#prescriptions{
+    width: 170px;
+    background-color: #444343 !important;
+    color:white;
+}
+
+#spinner{
+    margin-top: 20%
+}

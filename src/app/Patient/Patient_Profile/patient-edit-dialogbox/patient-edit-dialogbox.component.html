@@ -1,0 +1,28 @@
+<h1>Update Details</h1>
+<div mat-dialog-content class="dialog-box">
+  <form #f='ngForm' (submit)="onSubmit(f.value)">
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input type="email" name="email" matInput ngModel #Email='ngModel'  [(ngModel)]="email" (change)="getValue(Email)"
+        pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+\.[a-z]{2,6}$">
+      <mat-error *ngIf="Email.touched && (Email.invalid||Email.errors?.pattern)">Invalid email format</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+      <mat-label>Phone</mat-label>
+      <input type="tel" name="contactNumber"matInput ngModel #phone='ngModel' [(ngModel)]="phoneNo"  (change)="getValue(phone)"
+        pattern="^[9876]\d{9}$">
+      <mat-error *ngIf="phone.touched && (phone.invalid||phone.errors?.pattern)">Invalid email format</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+      <mat-label>Address</mat-label>
+      <input type="text" name="address" matInput ngModel #Address='ngModel' [(ngModel)]="add" (change)="getValue(Address)"
+        pattern="\w{3,50}">
+    </mat-form-field>
+
+    <button mat-button class="update-buttons" type="submit" (click)="onNoClick()"><span>Update</span></button>
+    <button mat-button class="back-buttons" (click)="onNoClick()"><span>Back</span></button>
+
+  </form>
+</div>

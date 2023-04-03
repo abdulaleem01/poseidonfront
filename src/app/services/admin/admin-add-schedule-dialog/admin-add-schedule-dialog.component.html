@@ -1,0 +1,29 @@
+<!-- <h1 mat-dialog-title class="dtitle">New Availability</h1> -->
+<form>
+    <p>Scheduled From</p>
+    <p> {{phyFromDate}} - {{phyToDate}}</p>
+    <div mat-dialog-content>
+        <div class="det-box">
+            <mat-form-field appearance="fill">
+                <mat-label>Schedule From</mat-label>
+                <input matInput [min]="startDate" [max]="endDate" [matDatepicker]="formpicker" name="from_date" [(ngModel)]="fromDate" ngModel>
+                <mat-hint>DD/MM/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="formpicker"></mat-datepicker-toggle>
+                <mat-datepicker #formpicker></mat-datepicker>
+            </mat-form-field>
+            &nbsp;
+            <mat-form-field appearance="fill">
+                <mat-label>Schedule To</mat-label>
+                <input matInput [min]="startDate" [max]="endDate" [matDatepicker]="topicker" name="to_date"  [(ngModel)]="toDate" ngModel>
+                <mat-hint>DD/MM/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="topicker"></mat-datepicker-toggle>
+                <mat-datepicker #topicker></mat-datepicker>
+            </mat-form-field>
+        </div>
+    </div>
+    <div mat-dialog-actions class="btn-box">
+        <button mat-button class="add-btn dbtn" (click)="add_availability()"><span>ADD</span></button>
+        <button mat-button class="cancel-btn dbtn" (click)="close_dialogbox()"><span>CANCEL</span></button>
+
+    </div>
+</form>

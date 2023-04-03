@@ -1,0 +1,126 @@
+<h1>Hi!</h1>
+<mat-card class="signinCard">
+    <mat-card-content id="center">
+        <form #f='ngForm' (submit)="onSubmit(f.value)">
+
+
+                <div class="flex-container" fxLayout.gt-lg="row wrap" fxLayoutAlign="space-evenly center">
+                    <div class="formfield">
+                        <mat-form-field appearance="outline">
+                            <mat-label>First Name</mat-label>
+                            <input type="text" class="form-control" name="firstName" matInput ngModel #FirstName='ngModel'
+                                (change)="getValue(FirstName)" required pattern="\w{3,50}">
+                            <mat-error *ngIf="">invalid name</mat-error>
+                            <mat-error *ngIf="FirstName.touched && (FirstName.invalid||FirstName.errors?.pattern)">min 3
+                                characters</mat-error>
+                        </mat-form-field>
+                    </div>
+                  
+
+                  <div class="formfield">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input type="text" class="form-control" name="lastName" matInput ngModel #LastName='ngModel'
+                            (change)="getValue(LastName)" required pattern="\w{3,50}">
+                        <mat-error *ngIf="">invalid name</mat-error>
+                        <mat-error *ngIf="LastName.touched && (LastName.invalid||FirstName.errors?.pattern)">min 3
+                            characters</mat-error>
+                    </mat-form-field>
+                  </div>
+                </div>
+
+                <div fxLayout="column" fxLayoutAlign="space-between center">
+                    <mat-form-field appearance="outline" class="fieldSingle">
+                        <mat-label>Email</mat-label>
+                        <input type="email" name="email" matInput ngModel #Email='ngModel' (change)="getValue(Email)" (change)="isExistEmail(Email.value)" required
+                            pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+\.[a-z]{2,6}$">
+                        <mat-error *ngIf="Email.touched && (Email.invalid||Email.errors?.pattern)">Invalid email format</mat-error>
+                    </mat-form-field>
+                    
+                    <mat-form-field appearance="outline" class="fieldSingle" >
+                        <mat-label>Phone</mat-label>
+                        <input type="tel" name="contactNumber" matInput ngModel #phone='ngModel' (change)="getValue(phone)" (change)="isExistPhone(phone.value)" required
+                            pattern="^[9876]\d{9}$">
+                        <mat-error *ngIf="phone.touched && (phone.invalid||phone.errors?.pattern)">Invalid phone number format</mat-error>
+                    </mat-form-field>
+                </div>
+
+
+                <div class="flex-container" fxLayout.gt-lg="row wrap" fxLayoutAlign="space-evenly center">
+                    <div class="formfield">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input type="password" name="password" matInput ngModel #password='ngModel' (change)="getValue(password.value)"
+                                [(ngModel)]="newPassword" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
+                            <mat-error *ngIf="password.touched && (password.invalid||password.errors?.pattern)">Invalid password
+                                format</mat-error>
+                        </mat-form-field>
+            
+                    </div>
+                
+                
+                    <div class="formfield">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Confirm Password</mat-label>
+                            <input type="password" name="Confirmpassword" id="cPass" matInput ngModel #Confirmpassword='ngModel'
+                                [(ngModel)]="confirmPassword" (change)='getValue(Confirmpassword.value)' (change)="checkPassword()">
+                            <!-- <mat-error *ngIf="Confirmpassword.touched && (Confirmpassword.invalid ||Confirmpassword.errors?.pattern)">Invalid
+                                password format</mat-error> -->
+                            <mat-error *ngIf="Confirmpassword.errors?.passwordChecker &&(Confirmpassword.dirty||Confirmpassword.touched)">passwords are not matching</mat-error>
+                        </mat-form-field>
+                    
+                           
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="flex-container" fxLayout.gt-lg="row wrap" fxLayoutAlign="space-evenly center">
+                    <div class="formfield">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Date of Birth</mat-label>
+                            <input name="dob" matInput [matDatepicker]="topicker" ngModel #dob='ngModel' (change)="getValue(dob)" required>
+                            <mat-error *ngIf="dob.touched && (dob.invalid||dob.errors?.pattern)">Dob required</mat-error>
+                            <mat-datepicker-toggle matIconSuffix [for]="topicker"></mat-datepicker-toggle>
+                            <mat-datepicker #topicker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                
+                
+                    <div class="formfield">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Gender</mat-label>
+                    
+                        <input type="text" name="gender" matInput ngModel #gender='ngModel' (change)="getValue(dob)" required
+                            pattern="(M|F|O)">
+                        <mat-error *ngIf="gender.touched && (gender.invalid||gender.errors?.pattern)">Mention M/F/O</mat-error>
+                    </mat-form-field>
+                    </div>
+                </div>
+
+
+                <div fxLayout="column" fxLayoutAlign="space-between center">
+                    <mat-form-field appearance="outline" class="fieldSingle">
+                        <mat-label>Address</mat-label>
+                        <input type="text" name="address" matInput ngModel #Address='ngModel' (change)="getValue(Address)" required
+                            pattern="\w{3,50}">
+                    </mat-form-field>
+                </div>
+
+                <button mat-button disabled class="signin-button"
+                    *ngIf="FirstName.invalid || LastName.invalid || dob.invalid || Email.invalid || password.invalid || Confirmpassword.invalid || gender.invalid || Address.invalid ||!passMatch||EmailExist||PhoneExist"><span
+                        class="s_span">SignIn</span></button>
+                <button mat-button type="submit" class="signin-button"
+                    *ngIf="FirstName.valid && LastName.valid && dob.valid && Email.valid && password.valid && Confirmpassword.valid && gender.valid && Address.valid && passMatch && !EmailExist && !PhoneExist"><span
+                        class="s_span">SignIn</span></button>
+
+                
+        </form>
+    </mat-card-content>
+</mat-card>
+
+
+<

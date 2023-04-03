@@ -1,0 +1,26 @@
+<h1>Add Medicine</h1>
+<div mat-dialog-content class="dialog-box">
+    <form #f='ngForm' (submit)="onSubmit(f.value)">
+        <mat-form-field appearance="outline">
+            <mat-label>Medicine</mat-label>
+            <input type="text" name="Medicine" matInput ngModel #Medicine='ngModel' (change)="getValue(Medicine)">
+            <mat-error *ngIf="Medicine.touched && Medicine.invalid">Invalid email format</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline">
+        <mat-label>Dosage</mat-label>
+        <input type="text" name="Dosage" matInput ngModel #Dosage='ngModel' (change)="getValue(Dosage)">
+        <mat-error *ngIf="Dosage.touched && Dosage.invalid">Invalid email format</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline">
+            <mat-label>Notes</mat-label>
+            <input type="text" name="Notes" matInput ngModel #Notes='ngModel' (change)="getValue(Notes)">
+            <mat-error *ngIf="Notes.touched && Notes.invalid">Invalid email format</mat-error>
+        </mat-form-field>
+
+        <button mat-button class="update-buttons" type="submit"><span>Update</span></button>
+        <button mat-button class="back-buttons" type="button" (click)="onNoClick()"><span>Back</span></button>
+
+    </form>
+</div>

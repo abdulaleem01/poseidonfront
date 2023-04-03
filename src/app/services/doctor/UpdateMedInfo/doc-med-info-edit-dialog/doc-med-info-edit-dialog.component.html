@@ -1,0 +1,26 @@
+<h1>Update Observation</h1>
+<div mat-dialog-content class="dialog-box">
+    <form #f='ngForm' (submit)="onSubmit(f.value)">
+        <mat-form-field appearance="outline">
+            <mat-label>Test</mat-label>
+            <input type="text" name="Test" matInput ngModel #Test='ngModel' (change)="getValue(Test)">
+            <mat-error *ngIf="Test.touched && Test.invalid">Invalid email format</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline">
+            <mat-label>Result</mat-label>
+            <input type="text" name="Result" matInput ngModel #Result='ngModel' (change)="getValue(Result)">
+            <mat-error *ngIf="Result.touched && Result.invalid">Invalid email format</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="outline">
+            <mat-label>Notes</mat-label>
+            <input type="text" name="Notes" matInput ngModel #Notes='ngModel' (change)="getValue(Notes)">
+            <mat-error *ngIf="Notes.touched && Notes.invalid">Invalid email format</mat-error>
+        </mat-form-field>
+
+        <button mat-button class="update-buttons" type="submit"><span>Update</span></button>
+        <button mat-button class="back-buttons" type="button" (click)="onNoClick()"><span>Back</span></button>
+
+    </form>
+</div>

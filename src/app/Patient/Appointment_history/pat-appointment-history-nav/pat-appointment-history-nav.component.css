@@ -1,0 +1,35 @@
+.nav-bar {
+    background-color: #E8E8E8;
+}
+
+.space {
+    flex: 1 1 auto;
+}
+
+span {
+    font-family: 'montserrat';
+    font-weight: bold;
+    color: #444343;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #444343;
+    font-family: 'montserrat';
+    font-weight: 600;
+    font-size: 80%;
+    margin-left: 1%;
+    margin-right: 2%;
+}
+
+a:hover {
+    cursor: pointer;
+    background-color: #E8E8E8;
+}
+
+.isactive {
+    padding: 0 10px 0 10px;
+    background-color: #6DF5D4 !important;
+    border-radius: 50px;
+}

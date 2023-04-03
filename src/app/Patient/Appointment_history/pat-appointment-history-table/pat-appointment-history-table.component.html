@@ -1,0 +1,48 @@
+
+
+<div *ngIf="load" fxLayoutAlign="center">
+    <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="empty" fxLayoutAlign="center">
+<h1>Sorry, you don't have any appointments history</h1>
+</div>
+
+<div class="mat-elevation-z8" *ngIf="show">
+
+<table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="Id">
+        <th mat-header-cell *matHeaderCellDef class="titles">Id</th>
+        <td mat-cell *matCellDef="let app;let i=index;" class="content">{{(paginator.pageIndex * paginator.pageSize)+(i+1)}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="Date">
+        <th mat-header-cell *matHeaderCellDef class="titles">Date</th>
+        <td mat-cell *matCellDef="let app" class="content">{{app.date}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Doctor">
+        <th mat-header-cell *matHeaderCellDef class="titles">Doctor</th>
+            <td mat-cell *matCellDef="let app" class="content">{{app.physicianEmail}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Notes">
+        <th mat-header-cell *matHeaderCellDef class="titles">Notes</th>
+        <td mat-cell *matCellDef="let app" class="content">{{app.reason}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Status" >
+        <th mat-header-cell *matHeaderCellDef class="titles">Status</th>
+        <td mat-cell *matCellDef="let app" class="content">{{app.acceptance |digitToValue}}</td>
+    </ng-container>
+    
+    
+    
+    <tr mat-header-row *matHeaderRowDef="displayedColumns">/tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        
+</table>
+<mat-paginator [length]="100" [pageSize]="10" #paginator [pageSizeOptions]="[5, 10, 25,50,100]"aria-label="Select page">
+</mat-paginator>
+</div>

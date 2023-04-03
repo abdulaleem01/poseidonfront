@@ -1,0 +1,49 @@
+
+h1 {
+    margin-top: 5%;
+    color: #444343;
+    font-family: 'montserrat';
+    font-weight: bold;
+    text-align: center;
+    font-size: xx-large;
+}
+
+mat-card{
+    box-shadow: none;
+    background-color: #F6F6F6;
+    width: 35%;
+    padding-bottom: 30px;
+    min-width: 550px;
+    margin: 2em auto;
+    text-align: center;
+    max-height: 600px;
+}
+
+mat-card-content{
+    margin-top: 10%;
+}
+
+mat-form-field{
+    width: 75%;
+}
+
+.field{
+    border-color: aqua;
+    margin-top: 20px;
+}
+
+.input_field{
+    width: 200px;
+}
+
+.login-button{
+    border-radius: 0px;
+    background-color: #444343;
+    border: 1.5px aqua solid;
+    width: 30%;
+    margin-top: 20px;
+}
+
+.l_span{
+    color: white;
+}

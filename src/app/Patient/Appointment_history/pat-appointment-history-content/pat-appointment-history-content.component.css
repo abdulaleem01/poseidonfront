@@ -1,0 +1,19 @@
+button {
+    background-color: #6DF5D4 !important;
+}
+
+.container {
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 30px;
+}
+
+.headingText{
+    margin-top:50px;
+
+}
+.headingText h2{
+    font-family: 'montserrat';
+        font-weight: bold;
+}
+

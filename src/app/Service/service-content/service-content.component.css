@@ -1,0 +1,51 @@
+h1 {
+    margin-top: 5%;
+    color: #444343;
+    font-family: 'montserrat';
+    font-weight: bold;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.link_cards{
+    margin-top: 10%;
+    text-align: center;
+}
+
+.service-card{
+    margin: 2%;
+    border: 1px #444343 solid;
+    border-radius: 15px;
+    padding: 80px 40px 40px 40px;
+    cursor: pointer;
+}
+
+.card_names{
+    margin-top: 5%;
+    text-align: center;
+}
+
+span{
+    margin: 2%;
+    color: #444343;
+    font-family: 'montserrat';
+    font-weight: 600;
+    padding: 0px 40px 60px 40px;
+}
+
+.p{
+   padding-right: 50px;
+}
+
+.d{
+    padding-right: 45px;
+}
+
+.n{
+    padding-right: 50px;
+
+}
+
+.a{
+    padding-left: 50px;
+}
